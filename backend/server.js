@@ -5,7 +5,8 @@ import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import Razorpay from 'razorpay';
 import crypto from 'node:crypto';
-import { WORKSHOP_AMOUNT, WORKSHOP_CONFIG } from './Config_amount.js';
+//import { WORKSHOP_AMOUNT, WORKSHOP_CONFIG } from './Config_amount.js';
+import { WORKSHOP_AMOUNT, WORKSHOP_CONFIG } from './config_amount.js';
 import { createClient } from '@supabase/supabase-js';
 
 const required = ['SUPABASE_URL', 'SUPABASE_SERVICE_ROLE_KEY', 'RAZORPAY_KEY_ID', 'RAZORPAY_KEY_SECRET'];
