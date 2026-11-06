@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
-const API_URL = 'http://localhost:3001/api';
+//const API_URL = 'http://localhost:3001/api';
+const API_URL = 'https://tgs-workshop-api.onrender.com/api';
 
 export interface RegistrationPayload {
   fullName: string;
