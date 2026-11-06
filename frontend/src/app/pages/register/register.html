@@ -1,0 +1,98 @@
+<main class="payment-page">
+    <a class="back-link" routerLink="/">← Back to workshop</a>
+    <section class="payment-panel">
+        @if (!paid && !registeredLater) {
+        <div class="panel-heading">
+            <div>
+                <h1>Complete Your Payment</h1>
+                <p>Enter your details to proceed securely.</p>
+            </div>
+            <span class="secure-mark">⌑</span>
+        </div>
+
+        <div class="amount-box"><span>Amount to pay</span><strong>₹{{ workshop.price }}</strong></div>
+
+        <form #registrationForm="ngForm" (ngSubmit)="submit(registrationForm)" novalidate>
+            <label>Full Name*</label>
+            <input name="fullName" [(ngModel)]="form.fullName" required minlength="2" placeholder="Enter your full name"
+                autocomplete="name">
+
+            <label>Email*</label>
+            <input name="email" [(ngModel)]="form.email" required email type="email" placeholder="your@email.com"
+                autocomplete="email">
+
+            <label>Phone Number*</label>
+            <div class="phone-row">
+                <div class="country-code">🇮🇳 India (+91)</div>
+                <input name="phone" [(ngModel)]="form.phone" required minlength="10" maxlength="15" inputmode="tel"
+                    placeholder="9876543210" autocomplete="tel">
+            </div>
+
+            <label for="annualRevenue">
+                What is your company's annual revenue? <span>*</span>
+            </label>
+            <select name="annualRevenue" [(ngModel)]="form.annualRevenue" required>
+                <option value="" disabled>Select annual revenue</option>
+                <option value="Pre-revenue">Pre-revenue / Just started</option>
+                <option value="Below 10 Lakhs">Below ₹10 Lakhs</option>
+                <option value="10-25 Lakhs">₹10-25 Lakhs</option>
+                <option value="25-50 Lakhs">₹25-50 Lakhs</option>
+                <option value="50 Lakhs-1 Crore">₹50 Lakhs-1 Crore</option>
+                <option value="1-5 Crores">₹1-5 Crores</option>
+                <option value="5+ Crores">₹5 Crores+</option>
+            </select>
+
+            <label for="businessAge">
+                How long has your business been operating? <span> </span>
+            </label> <select name="experience" [(ngModel)]="form.experience" required>
+                <option value="" disabled>Select business age</option>
+                <option value="Less than 1 year">Less than 1 year</option>
+                <option value="1-3 years">1-3 years</option>
+                <option value="3-5 years">3-5 years</option>
+                <option value="5-10 years">5-10 years</option>
+                <option value="10-15 years">10-15 years</option>
+                <option value="15+ years">15+ years</option>
+            </select>
+            @if (errorMessage) {<p class="error-message" role="alert">{{ errorMessage }}</p>}
+
+            <button class="pay-button" type="submit" [disabled]="loading || registrationForm.invalid">
+
+                @if (loading) {
+                <span class="spinner"></span>
+                Processing...
+                } @else {
+                <span> </span>
+                Pay ₹{{ workshop.price }} Now
+                }
+            </button>
+
+            <button class="pay-later-button" type="button" [disabled]="loading || registrationForm.invalid"
+                (click)="registerAndPayLater()">
+                Register Now, Pay Later
+            </button>
+        </form>
+        <div class="secure-footer"><span>♙</span> Secure payment powered by Razorpay</div>
+        }
+        @else if (registeredLater) {
+        <div class="success-state">
+            <div class="success-icon">✓</div>
+            <h1>Registration Received!</h1>
+            <p>
+                Your workshop registration has been saved.
+                Your payment of ₹{{ workshop.price }} is still pending.
+                Please complete the payment manually before the workshop.
+            </p>
+            <a class="pay-button success-link" routerLink="/">Back to workshop</a>
+        </div>
+        }
+        @else {
+        <div class="success-state">
+            <div class="success-icon">✓</div>
+            <h1>You're registered!</h1>
+            <p>Your payment was verified successfully. We look forward to seeing you at the Your Workshop Solutions.</p>
+            <a class="pay-button success-link" routerLink="/">Back to workshop</a>
+        </div>
+        }
+    </section>
+    <p class="page-note">Your information is used only for workshop registration and communication.</p>
+</main>

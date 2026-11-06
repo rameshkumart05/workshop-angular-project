@@ -1,0 +1,56 @@
+
+{
+  "HEADER": {
+    "BRAND": "TechGrow Solutions",
+    "HOME": "Home",
+    "REGISTER": "Register Now",
+    "LANGUAGE": "Language"
+  },
+  "HERO": {
+  "LIVE_WORKSHOP": "LIVE ONLINE WORKSHOP",
+  "TITLE_LINE1": "Ready to take your",
+  "TITLE_LINE2": "business to the next level?",
+  "QUESTION": "Want to double your business revenue?",
+  "DESCRIPTION": "Join us to discover proven growth strategies.",
+  "MESSAGE": "We're here to help you turn your business vision into reality.",
+  "REGISTER": "Register Now for",
+  "TRUST": "Limited seats · Live on Zoom · Instant confirmation after payment",
+  "COUNTDOWN_TITLE": "Your Workshop -",
+  "STARTS_IN": "Starts In",
+  "DAYS": "DAYS",
+  "HOURS": "HOURS",
+  "MINUTES": "MINUTES",
+  "SECONDS": "SECONDS",
+  "RIGHTS": "All rights reserved."
+  },
+  "WORKSHOP": {
+    "TITLE": "Business Growth Workshop",
+    "DATE": "21st, 22nd November",
+    "LIVE": "Live on Zoom",
+    "DAY1": "Day 1",
+    "DAY2": "Day 2",
+    "TIME1": "5 PM - 6 PM",
+    "TIME2": "3 PM - 4 PM",
+    "PRICE": "Workshop Registration Fee",
+    "CURRENCY": "₹{{price}}",
+    "DATE_LABEL": "DATE",
+"LIVE_LABEL": "LIVE",
+"TIME_DAY1": "TIME: DAY 1",
+"TIME_DAY2": "TIME: DAY 2",
+"REGISTER_FOR": "Register Now For"
+  },
+  "REGISTER_PAGE": {
+    "TITLE": "Workshop Registration",
+    "NAME": "Full Name",
+    "EMAIL": "Email Address",
+    "PHONE": "Phone Number",
+    "REVENUE": "What is your company's annual revenue?",
+    "EXPERIENCE": "How long has your business been operating?",
+    "PAY": "Proceed to Payment",
+    "PROCESSING": "Processing...",
+    "SUCCESS": "Your registration is successful!",
+    "PAYMENT_RECEIVED": "Payment received. Confirming your registration...",
+    "REQUIRED": "This field is required.",
+    "INVALID_EMAIL": "Please enter a valid email address."
+  }
+}

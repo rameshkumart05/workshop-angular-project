@@ -1,0 +1,132 @@
+
+<div class="landing-layout">
+
+  <!-- LEFT PANEL: WORKSHOP DETAILS -->
+  <section class="details-section">
+
+    <div class="section-heading">
+      <span></span>
+      <h2>{{ 'WORKSHOP.TITLE' | translate }}</h2>
+      <span></span>
+    </div>
+
+    <div class="details-grid">
+
+      <article class="detail-card">
+        <div class="detail-icon">▣</div>
+        <div>
+          <small>{{ 'WORKSHOP.DATE_LABEL' | translate }}</small>
+          <strong>{{ workshop.dateLabel }}</strong>
+        </div>
+      </article>
+
+      <article class="detail-card">
+        <div class="detail-icon">◎</div>
+        <div>
+          <small>{{ 'WORKSHOP.LIVE_LABEL' | translate }}</small>
+          <strong>{{ workshop.liveLabel }}</strong>
+        </div>
+      </article>
+
+      <article class="detail-card">
+        <div class="detail-icon">◷</div>
+        <div>
+          <small>{{ 'WORKSHOP.TIME_DAY1' | translate }}</small>
+          <strong>{{ workshop.day1 }}</strong>
+        </div>
+      </article>
+
+      <article class="detail-card">
+        <div class="detail-icon">◷</div>
+        <div>
+          <small>{{ 'WORKSHOP.TIME_DAY2' | translate }}</small>
+          <strong>{{ workshop.day2 }}</strong>
+        </div>
+      </article>
+
+    </div>
+
+    <a class="register-wide" routerLink="/register">
+      {{ 'WORKSHOP.REGISTER_FOR' | translate }}
+      ₹{{ workshop.price }} →
+    </a>
+
+  </section>
+
+  <!-- RIGHT PANEL: BUSINESS GROWTH -->
+  <div class="right-content">
+
+    <section class="hero">
+
+      <div class="eyebrow">
+        <span class="live-dot"></span>
+        {{ 'HERO.LIVE_WORKSHOP' | translate }}
+      </div>
+
+      <h1 [class.tamil-heading]="currentLanguage === 'ta'">
+  {{ 'HERO.TITLE_LINE1' | translate }}<br>
+  <span>{{ 'HERO.TITLE_LINE2' | translate }}</span>
+</h1>
+
+      <p class="hero-copy">
+        {{ 'HERO.QUESTION' | translate }}
+        {{ 'HERO.DESCRIPTION' | translate }}
+        {{ 'HERO.MESSAGE' | translate }}
+      </p>
+
+      <a class="primary-cta" routerLink="/register">
+        {{ 'HERO.REGISTER' | translate }}
+        ₹{{ workshop.price }} →
+      </a>
+
+      <div class="trust-line">
+        ✦ {{ 'HERO.TRUST' | translate }}
+      </div>
+
+      <section class="countdown-card">
+
+        <div class="countdown-title">
+          {{ 'HERO.COUNTDOWN_TITLE' | translate }}
+          <em>{{ 'HERO.STARTS_IN' | translate }}</em>
+        </div>
+
+        <div class="countdown">
+          <div>
+            <strong>{{ days }}</strong>
+            <small>{{ 'HERO.DAYS' | translate }}</small>
+          </div>
+          <b>:</b>
+          <div>
+            <strong>{{ hours }}</strong>
+            <small>{{ 'HERO.HOURS' | translate }}</small>
+          </div>
+          <b>:</b>
+          <div>
+            <strong>{{ minutes }}</strong>
+            <small>{{ 'HERO.MINUTES' | translate }}</small>
+          </div>
+          <b>:</b>
+          <div>
+            <strong>{{ seconds }}</strong>
+            <small>{{ 'HERO.SECONDS' | translate }}</small>
+          </div>
+        </div>
+
+      </section>
+
+    </section>
+  </div>
+</div>
+<!-- ENGLISH WORKSHOP POSTER -->
+<!-- <a href="http://localhost:4200/landing" class="poster-signup">
+  <img src="/assets/images/tgs-workshop-english.png"
+    alt="TGS Business Growth Workshop - English"></a> -->
+
+<!-- TAMIL WORKSHOP POSTER -->
+<!-- <a href="http://localhost:4200/landing" class="poster-signup">
+  <img src="/assets/images/tgs-workshop-tamil.png"
+    alt="TGS Business Growth Workshop - Tamil"></a> -->
+<footer>
+  © 2026 {{ workshop.title }} ·
+  {{ 'HERO.RIGHTS' | translate }}
+</footer>

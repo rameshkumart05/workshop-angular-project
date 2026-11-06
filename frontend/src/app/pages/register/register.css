@@ -1,0 +1,22 @@
+.pay-later-button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px 20px;
+  border: 2px solid #1760ed;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1760ed;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.pay-later-button:hover:not(:disabled) {
+  background: #eef4ff;
+}
+
+.pay-later-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

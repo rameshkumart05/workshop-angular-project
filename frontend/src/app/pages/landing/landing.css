@@ -1,0 +1,161 @@
+/* Main two-column layout */
+.landing-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.5fr;
+  gap: 35px;
+  max-width: 1200px;
+  margin: 55px auto;
+  padding: 0 25px;
+  align-items: center;
+}
+
+/* LEFT PANEL */
+.details-section {
+  background: #111b31;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 30px 24px;
+  height: fit-content;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  white-space: nowrap;
+  font-size: 22px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.detail-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.detail-icon {
+  font-size: 25px;
+  color: #4d91ff;
+}
+
+.detail-card small {
+  display: block;
+  color: #91a3c0;
+  margin-bottom: 6px;
+}
+
+.detail-card strong {
+  color: white;
+  font-size: 15px;
+}
+
+.register-wide {
+  display: block;
+  text-align: center;
+  background: #1760ed;
+  color: white;
+  padding: 16px;
+  margin-top: 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* RIGHT PANEL */
+.right-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.hero {
+  padding: 20px 10px;
+}
+
+.countdown-card {
+  background: #111b31;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive mobile layout */
+@media (max-width: 768px) {
+
+  .landing-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin: 25px auto;
+    padding: 0 16px;
+  }
+
+  .details-section {
+    padding: 22px 18px;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero {
+    padding: 15px 5px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .countdown-card {
+    padding: 18px 12px;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Smaller heading when Tamil is selected */
+.hero h1.tamil-heading {
+  font-size: 10px;
+  line-height: 0.85;
+}
+
+.hero h1.tamil-heading span {
+  font-size: inherit;
+}
+
+/* Workshop posters */
+.poster-signup {
+  display: block;
+  max-width: 1100px;
+  margin: 30px auto;
+  cursor: pointer;
+}
+
+.poster-signup img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.poster-signup:hover img {
+  transform: scale(1.01);
+}
+}
